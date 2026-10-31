@@ -8,15 +8,16 @@ Windows の**画面全体**に、赤いペンで直接描き込むアプリで�
 
 ## ⬇ ダウンロード
 
-### 👉 [**Windows 用をダウンロード（ポータブル版 .exe）**](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-portable.exe)
+### 👉 [**Windows 用をダウンロード（インストーラー）**](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-Setup.exe)
 
-ダブルクリックで起動します。インストールは不要です（約105MB）。
+約116MB。Windows のみ。
 
 1. 上のリンクをクリックして、ファイルを保存します。
-2. ダブルクリックします。初回は、コード署名をしていないため、Windows が「PC が保護されました」と表示することがあります。**詳細情報 → 実行** をクリックしてください。
-3. すぐにペンが使えます。マウスで描き、**Ctrl + Shift + P** で表示・非表示を切り替えます。
+2. ダブルクリックして、案内に従ってインストールします。ユーザー単位のインストールで、管理者権限は不要です。初回は、コード署名をしていないため、Windows が「PC が保護されました」と表示することがあります。**詳細情報 → 実行** をクリックしてください。
+3. スタートメニューから **Web Pen - Red** を開きます。すぐにペンが使えます。**Ctrl + Shift + P** で表示・非表示を切り替えます。
+4. 便利な使い方: スタートメニューの **Web Pen - Red** を右クリック → **タスクバーにピン留めする**。そのアイコンをクリックすると、ペンの表示・非表示を切り替えられます。
 
-インストーラー版（スタートメニューに登録、タスクバーにピン留め可）が良いときは、[**Web-Pen-Red-Setup.exe**](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-Setup.exe) です。 · [すべてのリリース](https://github.com/nolozy/web-pen-red-desktop/releases) · Windows のみ。
+削除するときは、設定 → アプリ → **Web Pen - Red** → アンインストール です。[すべてのリリース](https://github.com/nolozy/web-pen-red-desktop/releases)
 
 ## しくみ
 
@@ -64,7 +65,7 @@ Windows の**画面全体**に、赤いペンで直接描き込むアプリで�
 
 ### ダウンロード（ビルド不要）
 
-一番上の **⬇ ダウンロード** を参照してください（[ポータブル版 .exe](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-portable.exe)、[インストーラー](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-Setup.exe)）。[Releases](https://github.com/nolozy/web-pen-red-desktop/releases) には、ファイルを確認するための SHA-256 も載せています。コード署名をしていないため、Windows の SmartScreen が警告を出すことがあります。**詳細情報 → 実行** を選んでください。
+一番上の **⬇ ダウンロード** を参照してください（[インストーラー](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-Setup.exe)）。[Releases](https://github.com/nolozy/web-pen-red-desktop/releases) には、ファイルを確認するための SHA-256 も載せています。コード署名をしていないため、Windows の SmartScreen が警告を出すことがあります。**詳細情報 → 実行** を選んでください。
 
 ### 自分でビルドする
 
@@ -73,7 +74,7 @@ git clone https://github.com/nolozy/web-pen-red-desktop.git
 cd web-pen-red-desktop
 npm install
 npm start          # 起動
-npm run dist       # インストーラーとポータブル版を dist/ に作る
+npm run dist       # インストーラーを dist/ に作る
 ```
 
 Node.js が必要です。Electron と、素の HTML / CSS / JavaScript で作っています（フレームワークなし）。

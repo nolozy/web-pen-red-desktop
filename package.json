@@ -19,7 +19,7 @@
     "directories": { "output": "dist" },
     "files": ["main.js", "preload-*.js", "renderer/**", "assets/**"],
     "win": {
-      "target": ["nsis", "portable"],
+      "target": ["nsis"],
       "icon": "assets/icon.ico"
     },
     "nsis": {

@@ -8,15 +8,16 @@ Four buttons only: **Pen / Cursor / Clear all / Close**. No color picker UI: swi
 
 ## ⬇ Download
 
-### 👉 [**Download for Windows (portable .exe)**](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-portable.exe)
+### 👉 [**Download for Windows (installer)**](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-Setup.exe)
 
-Double-click to run. Nothing to install. (~105 MB)
+About 116 MB. Windows only.
 
 1. Click the link above and save the file.
-2. Double-click it. The first time, Windows may say it "protected your PC" because the app is not code-signed: click **More info → Run anyway**.
-3. The pen opens at once. Draw with the mouse, **Ctrl + Shift + P** shows / hides it.
+2. Double-click it and follow the installer. It installs for your user account, no administrator rights needed. The first time, Windows may say it "protected your PC" because the app is not code-signed: click **More info → Run anyway**.
+3. Open **Web Pen - Red** from the Start menu. The pen opens at once. **Ctrl + Shift + P** shows / hides it.
+4. Handy: right-click **Web Pen - Red** in the Start menu → **Pin to taskbar**. Click that icon to show / hide the pen.
 
-Prefer an installer (Start menu shortcut, can be pinned to the taskbar)? [**Web-Pen-Red-Setup.exe**](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-Setup.exe) · [All releases](https://github.com/nolozy/web-pen-red-desktop/releases) · Windows only.
+To remove it: Settings → Apps → **Web Pen - Red** → Uninstall. [All releases](https://github.com/nolozy/web-pen-red-desktop/releases)
 
 ## How it works
 
@@ -64,7 +65,7 @@ Drag the toolbar anywhere (dragging from a button is safe).
 
 ### Download (no build needed)
 
-See **⬇ Download** at the top: [portable .exe](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-portable.exe) or [installer](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-Setup.exe). The [Releases](https://github.com/nolozy/web-pen-red-desktop/releases) page also lists SHA-256 checksums so you can check the files. Windows may show a SmartScreen warning because the app is not code-signed: choose **More info → Run anyway**.
+See **⬇ Download** at the top: the [installer](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-Setup.exe). The [Releases](https://github.com/nolozy/web-pen-red-desktop/releases) page also lists a SHA-256 checksum so you can check the file. Windows may show a SmartScreen warning because the app is not code-signed: choose **More info → Run anyway**.
 
 ### Build it yourself
 
@@ -73,7 +74,7 @@ git clone https://github.com/nolozy/web-pen-red-desktop.git
 cd web-pen-red-desktop
 npm install
 npm start          # run it
-npm run dist       # build the installer and the portable exe into dist/
+npm run dist       # build the installer into dist/
 ```
 
 Requires Node.js. Built with Electron, plain HTML / CSS / JavaScript, no frameworks.
