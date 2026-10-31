@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'" />
+    <link rel="stylesheet" href="toolbar.css" />
+  </head>
+  <body>
+    <div id="tb">
+      <button class="btn" id="b-pen" type="button" title="Pen" aria-label="Pen">
+        <span class="bg" id="pen-bg"></span>
+        <svg viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.83 2.83 0 0 0-4-4L4 16v4z" /><path d="M14.5 5.5l4 4" /></svg>
+      </button>
+      <button class="btn" id="b-cursor" type="button" title="Cursor (Tab)" aria-label="Cursor">
+        <span class="bg" id="cursor-bg"></span>
+        <svg class="filled" viewBox="0 0 24 24"><path d="M5 2.5l13 8.4-5.7 1.2 2.6 5.6-2.5 1.2-2.6-5.6-4 3.6z" /></svg>
+      </button>
+      <button class="btn" id="b-clear" type="button" title="Clear all" aria-label="Clear all">
+        <svg viewBox="0 0 24 24"><path d="M4 6.5h16" /><path d="M9.5 6.5V4h5v2.5" /><path d="M6.5 6.5L7.5 20h9l1-13.5" /><path d="M10.5 10v6.5M13.5 10v6.5" /></svg>
+      </button>
+      <button class="btn" id="b-close" type="button" title="Close" aria-label="Close">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" /></svg>
+      </button>
+    </div>
+    <script src="toolbar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "web-pen-red-desktop",
+  "version": "1.0.0",
+  "description": "Tiny red pen overlay for your whole Windows screen (all displays). Pen / Cursor / Clear / Close, R/Y/G/B/W color keys.",
+  "main": "main.js",
+  "license": "MIT",
+  "author": "nolozy",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^45.2.1",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.nolozy.webpenred",
+    "productName": "Web Pen - Red",
+    "directories": { "output": "dist" },
+    "files": ["main.js", "preload-*.js", "renderer/**", "assets/**"],
+    "win": {
+      "target": ["nsis", "portable"],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "Web Pen - Red"
+    }
+  }
+}
