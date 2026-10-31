@@ -6,6 +6,18 @@ Windows の**画面全体**に、赤いペンで直接描き込むアプリで�
 
 ボタンは **ペン / カーソル / 全消去 / 終了** の4つだけです。色選択の画面はなく、ペンモード中に **R / Y / G / B / W** のキーで、赤・黄・緑・青・白に切り替えます。
 
+## ⬇ ダウンロード
+
+### 👉 [**Windows 用をダウンロード（ポータブル版 .exe）**](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-portable.exe)
+
+ダブルクリックで起動します。インストールは不要です（約105MB）。
+
+1. 上のリンクをクリックして、ファイルを保存します。
+2. ダブルクリックします。初回は、コード署名をしていないため、Windows が「PC が保護されました」と表示することがあります。**詳細情報 → 実行** をクリックしてください。
+3. すぐにペンが使えます。マウスで描き、**Ctrl + Shift + P** で表示・非表示を切り替えます。
+
+インストーラー版（スタートメニューに登録、タスクバーにピン留め可）が良いときは、[**Web-Pen-Red-Setup.exe**](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-Setup.exe) です。 · [すべてのリリース](https://github.com/nolozy/web-pen-red-desktop/releases) · Windows のみ。
+
 ## しくみ
 
 - 透明で最前面の描画用ウィンドウが、**すべてのディスプレイ**に重なります。描いているときだけ存在します。
@@ -52,7 +64,7 @@ Windows の**画面全体**に、赤いペンで直接描き込むアプリで�
 
 ### ダウンロード（ビルド不要）
 
-[Releases](https://github.com/nolozy/web-pen-red-desktop/releases) に公開されたときは、`Web Pen - Red 1.0.0.exe`（ポータブル版、ダブルクリックで起動）か `Web Pen - Red Setup 1.0.0.exe`（インストーラー）を入手してください。コード署名をしていないため、Windows の SmartScreen が警告を出すことがあります。**詳細情報 → 実行** を選んでください。
+一番上の **⬇ ダウンロード** を参照してください（[ポータブル版 .exe](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-portable.exe)、[インストーラー](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-Setup.exe)）。[Releases](https://github.com/nolozy/web-pen-red-desktop/releases) には、ファイルを確認するための SHA-256 も載せています。コード署名をしていないため、Windows の SmartScreen が警告を出すことがあります。**詳細情報 → 実行** を選んでください。
 
 ### 自分でビルドする
 

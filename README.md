@@ -6,6 +6,18 @@ Draw on your **whole Windows screen** with a red pen: a replay, a game, slides, 
 
 Four buttons only: **Pen / Cursor / Clear all / Close**. No color picker UI: switch colors with one key while the pen is on, **R / Y / G / B / W** (red, yellow, green, blue, white).
 
+## ⬇ Download
+
+### 👉 [**Download for Windows (portable .exe)**](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-portable.exe)
+
+Double-click to run. Nothing to install. (~105 MB)
+
+1. Click the link above and save the file.
+2. Double-click it. The first time, Windows may say it "protected your PC" because the app is not code-signed: click **More info → Run anyway**.
+3. The pen opens at once. Draw with the mouse, **Ctrl + Shift + P** shows / hides it.
+
+Prefer an installer (Start menu shortcut, can be pinned to the taskbar)? [**Web-Pen-Red-Setup.exe**](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-Setup.exe) · [All releases](https://github.com/nolozy/web-pen-red-desktop/releases) · Windows only.
+
 ## How it works
 
 - A transparent, always-on-top overlay covers **every display**. It only exists while you draw.
@@ -52,7 +64,7 @@ Drag the toolbar anywhere (dragging from a button is safe).
 
 ### Download (no build needed)
 
-Get `Web Pen - Red 1.0.0.exe` (portable, double-click) or `Web Pen - Red Setup 1.0.0.exe` (installer) from the [Releases](https://github.com/nolozy/web-pen-red-desktop/releases) page when one is published. Windows may show a SmartScreen warning because the app is not code-signed: choose **More info → Run anyway**.
+See **⬇ Download** at the top: [portable .exe](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-portable.exe) or [installer](https://github.com/nolozy/web-pen-red-desktop/releases/latest/download/Web-Pen-Red-Setup.exe). The [Releases](https://github.com/nolozy/web-pen-red-desktop/releases) page also lists SHA-256 checksums so you can check the files. Windows may show a SmartScreen warning because the app is not code-signed: choose **More info → Run anyway**.
 
 ### Build it yourself
 
