@@ -98,13 +98,31 @@ canvas.addEventListener('contextmenu', (e) => {
 
 /* ---------- keys (pen mode: the overlay has the keyboard) ---------- */
 
+// Q switches Pen <-> Cursor. The switch happens when Q is RELEASED: the
+// overlay still owns the keyboard at that moment, so the key-up never leaks to
+// the app underneath (a replay, a game) once focus goes back to it.
+let qHeld = false;
+window.addEventListener('blur', () => {
+  qHeld = false;
+});
+window.addEventListener(
+  'keyup',
+  (e) => {
+    if (e.key.toLowerCase() !== 'q' || !qHeld) return;
+    qHeld = false;
+    e.preventDefault();
+    window.pen.setMode(mode === 'pen' ? 'cursor' : 'pen');
+  },
+  true
+);
+
 window.addEventListener(
   'keydown',
   (e) => {
     if (e.repeat || e.ctrlKey || e.altKey || e.metaKey) return;
-    if (e.key === 'Tab' && !e.shiftKey) {
+    if (e.key.toLowerCase() === 'q' && !e.shiftKey) {
       e.preventDefault();
-      window.pen.setMode(mode === 'pen' ? 'cursor' : 'pen');
+      qHeld = true;
       return;
     }
     if (mode !== 'pen' || e.shiftKey) return;
