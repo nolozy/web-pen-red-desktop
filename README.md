@@ -75,6 +75,22 @@ Requires Node.js. Built with Electron, plain HTML / CSS / JavaScript, no framewo
 - The pen stays on top of a game or replay that takes focus (including after you switch to Cursor mode). It only goes away when you press **Ctrl + Shift + P** in pen mode, click ✕, or use the notification-area icon.
 - Windows only, for now.
 
+## Using it with VALORANT and League of Legends
+
+1. **Set the display mode to Windowed or Windowed Fullscreen (borderless).**
+   - VALORANT: Display Mode = *Windowed Fullscreen* or *Windowed*.
+   - League of Legends: Window Mode = *Borderless* or *Windowed*.
+   - In *Fullscreen*, Windows does not draw other windows on top of the game, so the pen does not show.
+2. **Use it for replays, VODs and spectating, not for live matches.** In pen mode this app takes the mouse and the keyboard, so you cannot play. It opens in pen mode the moment you launch it: start it before a match or after you finish.
+3. **Tab.**
+   - In pen mode, Tab switches to Cursor mode when you release it. It does not reach the game, so the scoreboard does not open.
+   - In Cursor mode, while the pen is visible, this app takes Tab so it can bring the pen back. **The game's scoreboard cannot be opened during that time.** To use the scoreboard, hide the pen: **Ctrl + Shift + P** in pen mode, or ✕.
+4. **Showing and hiding.** **Ctrl + Shift + P**: hidden → shown (pen) · Cursor mode → back to pen · pen mode → hidden. The pen stays on top even when the game takes focus; it only goes away when you do one of these (or ✕, or the notification-area icon).
+5. **Screen sharing (Discord and others): share your entire screen.** If you share only a window or the game, viewers do not see your lines, because they are drawn in a separate window above it.
+6. **Multiple displays.** The overlay covers every display. Lines belong to the display they were drawn on, and plugging or unplugging a display clears them.
+7. **Anti-cheat and rules.** This app does not read or change the game: it only puts its own window on top of the screen. How a game's anti-cheat (for example Riot Vanguard) treats an app like this is not something we can guarantee. Use it at your own responsibility and check the game's rules if in doubt.
+8. **First launch.** The app is not code-signed, so Windows SmartScreen may warn you: choose **More info → Run anyway**.
+
 ## Files
 
 ```
