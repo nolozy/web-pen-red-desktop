@@ -71,6 +71,7 @@ Requires Node.js. Built with Electron, plain HTML / CSS / JavaScript, no framewo
 - **Screen sharing**: if you share your **entire screen**, viewers see your lines. If you share a single **window**, they do not, because the lines are in a separate window above it.
 - **Ctrl + Shift + P** is also used by some apps (the command palette in VS Code, private windows in Firefox / Edge). While this app runs, the shortcut goes to the pen. If another app already uses it, this app shows a notice and you can still use the notification-area icon.
 - Lines belong to the display they were drawn on. If you plug or unplug a display, the lines are cleared.
+- The pen stays on top of a game or replay that takes focus (including after you switch to Cursor mode). It only goes away when you press **Ctrl + Shift + P** in pen mode, click ✕, or use the notification-area icon.
 - Windows only, for now.
 
 ## Files

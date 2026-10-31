@@ -173,6 +173,25 @@ function setMode(mode) {
   applyMode();
 }
 
+/**
+ * A game or a replay that takes focus (borderless fullscreen) is raised above
+ * every other topmost window, ours included, and the pen would look closed.
+ * While visible we keep raising the overlays and the toolbar without
+ * activating them, so nothing ever hides the pen except Ctrl+Shift+P.
+ */
+let keepTimer = null;
+function raiseAll() {
+  for (const w of overlays.values()) if (!w.isDestroyed() && w.isVisible()) w.moveTop();
+  if (toolbar && !toolbar.isDestroyed() && toolbar.isVisible()) toolbar.moveTop();
+}
+function startKeepOnTop() {
+  if (!keepTimer) keepTimer = setInterval(raiseAll, 250);
+}
+function stopKeepOnTop() {
+  clearInterval(keepTimer);
+  keepTimer = null;
+}
+
 function showAll() {
   state.visible = true;
   state.mode = 'pen'; // like the extension: it always opens in pen mode
@@ -183,10 +202,12 @@ function showAll() {
     toolbar.moveTop();
   }
   applyMode();
+  startKeepOnTop();
 }
 
 function hideAll() {
   state.visible = false;
+  stopKeepOnTop();
   for (const w of overlays.values()) if (!w.isDestroyed()) w.hide();
   if (toolbar && !toolbar.isDestroyed()) toolbar.hide();
 }
