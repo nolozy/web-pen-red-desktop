@@ -38,12 +38,13 @@ Drag the toolbar anywhere (dragging from a button is safe).
 
 | Key | Action |
 | --- | --- |
-| **Tab** | Pen ⇄ Cursor (it switches when you release the key, so nothing leaks to the app underneath, such as the replay's scoreboard) |
+| **Tab** | Pen ⇄ Cursor. Works in both modes (see below) |
 | **R / Y / G / B / W** | Red `#FF0000` / Yellow `#FFD500` / Green `#00C853` / Blue `#2979FF` / White `#FFFFFF` |
 | **Right-click** | Clear everything on every display instantly (no confirmation) |
 | **Ctrl + Shift + P** | See the table above |
 
-- These keys only work in pen mode, so they never get in the way of other apps. In cursor mode, use **Ctrl + Shift + P** or the toolbar's pen button to draw again.
+- **Tab** works in both modes. In pen mode it switches to Cursor when you release the key, so nothing leaks to the app underneath (for example the replay's scoreboard). In Cursor mode, while the pen is visible, this app takes Tab so it can bring the pen back: the app underneath does **not** receive that Tab. Hide the pen (**Ctrl + Shift + P** in pen mode, or ✕) to use Tab in that app as usual.
+- **R / Y / G / B / W** and **right-click** only work in pen mode, so they never get in the way of other apps. You can also draw again with **Ctrl + Shift + P** or the toolbar's pen button.
 - Changing the color does not recolor lines you already drew.
 - White is for dark scenes. It is invisible on white.
 

@@ -151,6 +151,23 @@ function focusOverlayUnderCursor() {
   if (win && !win.isDestroyed()) win.focus();
 }
 
+/**
+ * In Cursor mode the app underneath has the keyboard, so the overlay cannot
+ * hear Tab. While the pen is visible in Cursor mode, Tab is registered as a
+ * global shortcut that brings the pen back; it is released the moment the pen
+ * mode returns or the pen is hidden, so other apps keep their Tab.
+ */
+let tabHotkey = false;
+function syncTabHotkey() {
+  const want = state.visible && state.mode === 'cursor';
+  if (want && !tabHotkey) {
+    tabHotkey = globalShortcut.register('Tab', () => setMode('pen'));
+  } else if (!want && tabHotkey) {
+    globalShortcut.unregister('Tab');
+    tabHotkey = false;
+  }
+}
+
 /** Pen: overlays take the mouse and the keyboard. Cursor: everything passes through. */
 function applyMode() {
   for (const w of overlays.values()) {
@@ -165,6 +182,7 @@ function applyMode() {
   }
   broadcast('state', publicState());
   if (state.visible && state.mode === 'pen') focusOverlayUnderCursor();
+  syncTabHotkey();
 }
 
 function setMode(mode) {
@@ -208,6 +226,7 @@ function showAll() {
 function hideAll() {
   state.visible = false;
   stopKeepOnTop();
+  syncTabHotkey();
   for (const w of overlays.values()) if (!w.isDestroyed()) w.hide();
   if (toolbar && !toolbar.isDestroyed()) toolbar.hide();
 }
