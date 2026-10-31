@@ -77,6 +77,10 @@ function createOverlay(display) {
   });
   win.setAlwaysOnTop(true, 'screen-saver');
   win.setBounds(b);
+  // 99% opacity on purpose. A fully opaque window that covers the screen makes
+  // Chrome and other apps think they are completely hidden, and they pause
+  // their videos. A (barely) translucent window is not counted as covering them.
+  win.setOpacity(0.99);
   win.loadFile(path.join(__dirname, 'renderer', 'overlay.html'));
   win.webContents.on('did-finish-load', () => win.webContents.send('state', publicState()));
   return win;
