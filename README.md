@@ -38,7 +38,7 @@ Drag the toolbar anywhere (dragging from a button is safe).
 
 | Key | Action |
 | --- | --- |
-| **Q** | Pen ⇄ Cursor (it switches when you release the key, so nothing leaks to the app underneath) |
+| **Tab** | Pen ⇄ Cursor (it switches when you release the key, so nothing leaks to the app underneath, such as the replay's scoreboard) |
 | **R / Y / G / B / W** | Red `#FF0000` / Yellow `#FFD500` / Green `#00C853` / Blue `#2979FF` / White `#FFFFFF` |
 | **Right-click** | Clear everything on every display instantly (no confirmation) |
 | **Ctrl + Shift + P** | See the table above |
